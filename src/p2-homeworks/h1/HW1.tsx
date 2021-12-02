@@ -1,16 +1,12 @@
 import React from 'react'
 import Message from "./Message";
 
-export type CompanionsType = {
+export type MessageDataType = {
     id?: never
     avatar: string
     name: string
     message: string
     time: string
-}
-
-type MessageDataType = {
-    companions: CompanionsType
 }
 
 export const messageData = {

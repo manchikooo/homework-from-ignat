@@ -14,16 +14,15 @@
     border-radius: 15px;
     position: relative;
 }
-.messageInfoBlock1 {
-    display: flex;
-    /*align-items: flex-start;*/
-    /*justify-content: flex-end;*/
-    padding: 10px;
-    background-color: red;
-    min-width: 200px;
-    max-width: 300px;
-    border-radius: 15px;
-    position: relative;
+
+.messageBlock:nth-of-type(1) .messageInfoBlock {
+    background-color: #E7BABB;
+}
+.messageBlock:nth-of-type(2) .messageInfoBlock {
+    background-color: #CCB6D6;
+}
+.messageBlock:nth-of-type(3) .messageInfoBlock {
+    background-color: #F4F2D6;
 }
 
 .messageInfo {

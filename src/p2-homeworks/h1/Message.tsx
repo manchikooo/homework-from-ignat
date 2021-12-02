@@ -1,8 +1,8 @@
 import React from 'react'
 import classes from './Message.module.css'
-import {CompanionsType, messageData} from "./HW1";
+import {MessageDataType, messageData} from "./HW1";
 
-export function Message(props: CompanionsType) {
+export function Message(props: MessageDataType) {
 
     // if (messageData.companions[0].id === 1) {
     //     return ClassName
@@ -19,7 +19,7 @@ export function Message(props: CompanionsType) {
             <div className={classes.avatar}>
                 <img src={props.avatar} className={classes.avatarIcon}/>
             </div>
-            <div className={`${classes.messageInfoBlock} ${classes.messageInfoBlock + props.id}`}>
+            <div className={classes.messageInfoBlock}>
                 <div className={classes.messageInfo}>
                     <div className={classes.companionName}>{props.name}</div>
                     <div>{props.message}</div>
