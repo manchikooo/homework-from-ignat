@@ -2,7 +2,7 @@ import React from 'react'
 import Message from "./Message";
 
 export type MessageDataType = {
-    id?: never
+    id: number
     avatar: string
     name: string
     message: string
@@ -35,7 +35,8 @@ export const messageData = {
     ]
 }
 
-let companions = messageData.companions.map(c => <Message avatar={c.avatar}
+let companions = messageData.companions.map(c => <Message id={c.id}
+                                                          avatar={c.avatar}
                                                           name={c.name}
                                                           message={c.message}
                                                           time={c.time}/>)

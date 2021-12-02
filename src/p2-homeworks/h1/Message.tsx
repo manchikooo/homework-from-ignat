@@ -19,7 +19,7 @@ export function Message(props: MessageDataType) {
             <div className={classes.avatar}>
                 <img src={props.avatar} className={classes.avatarIcon}/>
             </div>
-            <div className={classes.messageInfoBlock}>
+            <div className={`${classes.messageInfoBlock} ${classes[`messageInfoBlock_${props.id}`]}`} >
                 <div className={classes.messageInfo}>
                     <div className={classes.companionName}>{props.name}</div>
                     <div>{props.message}</div>
