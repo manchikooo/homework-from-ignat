@@ -1,3 +1,57 @@
 .someClass {
 
 }
+
+.affairsBlock {
+}
+
+.affairsInfoBlock {
+    display: flex;
+    max-width: 300px;
+    justify-content: space-between;
+    margin: 10px;
+    border: 1px black solid;
+    border-radius: 15px;
+    padding: 3px;
+}
+
+.affairsNames {
+    min-width: 33%;
+}
+
+.affairsPriority {
+    min-width: 33%;
+}
+.affairsPriority_low {
+    color: limegreen;
+    min-width: 33%;
+}
+.affairsPriority_middle {
+    color: orange;
+    min-width: 33%;
+}
+.affairsPriority_high {
+    font-weight: bold;
+    color: red;
+    min-width: 33%;
+}
+
+.deleteButton {
+    border-radius: 50%;
+    min-width: 33%;
+}
+
+.activeButton {
+    background-color: #aaacab;
+    border-radius: 15px;
+    margin-right: 3px;
+}
+
+.unActiveButton {
+    border-radius: 15px;
+    margin-right: 3px;
+}
+
+.filterButtons {
+    margin-left: 10px;
+}

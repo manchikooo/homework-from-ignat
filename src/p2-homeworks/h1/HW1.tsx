@@ -2,7 +2,7 @@ import React from 'react'
 import Message from "./Message";
 
 export type MessageDataType = {
-    id: number
+    id?: number
     avatar: string
     name: string
     message: string
