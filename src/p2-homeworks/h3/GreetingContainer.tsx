@@ -18,9 +18,9 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // need to fix any
         const trimmedName = e.currentTarget.value.trim()// need to fix
-        if (trimmedName !== '') {
-            setName(trimmedName.trim())
-            error && setError('')
+        if (trimmedName) {
+            setName(trimmedName)
+            setError('')
         } else {
             setName('')
             setError('Неверно введено')
@@ -28,17 +28,14 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
         setName(e.currentTarget.value)
     }
     const addUser = () => {
-        if (name.trim()) {
-            setName(name)
-            setError('')
-            addUserCallback(name)
+        if (name !== '') {
+            addUserCallback(name.replace(/ +(?= )/g, ''))
+            alert(`Hello ${name.replace(/ +(?= )/g, '')}!`)
         } else {
-            setName('')
-            setError('Неверно введено')
+            setError('Неверно')
         }
+        // need to fix
         setName('')
-
-        alert(`Hello ${name}!`) // need to fix
     }
 
     // const onKeyPress = (e: number) => {

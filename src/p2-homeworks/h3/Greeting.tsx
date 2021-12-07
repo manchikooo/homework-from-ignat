@@ -28,6 +28,7 @@ const Greeting: React.FC<GreetingPropsType> = (
             </button>
             <span>{totalUsers}</span>
             <div className={s.errorMessage}>{error}</div>
+            <div>{name}</div>
         </div>
     )
 }
