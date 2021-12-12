@@ -9,7 +9,7 @@ function App() {
         <div className={s.App}>
             <div>react homeworks:</div>
             {/*HW1 сделано*/}
-            {/*<HW1/> */}
+            <HW1/>
             {/*HW2 сделано*/}
             {/*<HW2/>*/}
             <HW3/>
