@@ -23,7 +23,6 @@ export function HW3() {
 
     return (
         <div>
-            <hr/>
             homeworks 3
 
             {/*should work (должно работать)*/}
@@ -31,7 +30,6 @@ export function HW3() {
                                addUserCallback={addUserCallback}
             />
 
-            <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeGreeting/>*/}
             {users.map(u => <div key={u._id}>{u.name}</div>)}

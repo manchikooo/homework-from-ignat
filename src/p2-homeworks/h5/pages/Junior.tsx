@@ -8,7 +8,7 @@ import classes from './PreJunior.module.css'
 function PreJunior() {
     return (
         <div className={classes.preJuniorBlock}>
-            <HW1/>
+            {/*<HW1/>*/}
             <HW2/>
             <HW3/>
             <HW4/>

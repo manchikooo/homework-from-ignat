@@ -21,7 +21,6 @@ function HW4() {
 
     return (
         <div>
-            <hr/>
             homeworks 4
 
             <div className={s.column}>
@@ -68,7 +67,6 @@ function HW4() {
                                onChange={testOnChange}/>
             </div>
 
-            <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperInputText/>*/}
             {/*<AlternativeSuperButton/>*/}
