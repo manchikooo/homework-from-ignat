@@ -12,8 +12,6 @@ export function Message(props: MessageDataType) {
     //     return ClassName
     // }
 
-    // КАК СДЕЛАТЬ КАЖДОМУ ПЕРСОНАЖУ СВОЙ ЦВЕТ???
-
     return (
         <div className={classes.messageBlock}>
             <div className={classes.avatar}>

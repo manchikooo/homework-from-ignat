@@ -1,7 +1,120 @@
-.default {
-
+button {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    font-size: 1rem;
+    line-height: 1;
+    margin: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
-.red {
-    background: red;
+.default {
+    border-color: #1AE0FF;
+    border-radius: 15px;
+    color: #1AE0FF;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: color 150ms ease-in-out;
+    transition: color 150ms ease-in-out;
+}
+
+.default:hover {
+    color: #fff;
+}
+
+.default:hover:after {
+    width: 110%;
+}
+
+button:hover, .btn:focus {
+    color: #fff;
+    outline: 0;
+}
+
+.default:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: #1AE0FF;
+    z-index: -1;
+    -webkit-transition: width 150ms ease-in-out;
+    transition: width 150ms ease-in-out;
+}
+
+.redButton {
+    border-color: #E74B3C;
+    border-radius: 15px;
+    color: #E74B3C;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: color 150ms ease-in-out;
+    transition: color 150ms ease-in-out;
+}
+
+.redButton:hover {
+    color: #fff;
+}
+
+.redButton:hover:after {
+    width: 110%;
+}
+
+button:hover, .btn:focus {
+    color: #fff;
+    outline: 0;
+}
+
+.redButton:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: #E74B3C;
+    z-index: -1;
+    -webkit-transition: width 150ms ease-in-out;
+    transition: width 150ms ease-in-out;
+}
+
+.activeButton {
+    border-color: #1AE0FF;
+    background-color: #1AE0FF;
+    border-radius: 15px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: color 150ms ease-in-out;
+    transition: color 150ms ease-in-out;
+}
+
+.deleteButtom {
+    border-radius: 50%;
 }

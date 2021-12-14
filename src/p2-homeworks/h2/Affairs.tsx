@@ -2,6 +2,7 @@ import React from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
 import classes from './Affairs.module.css'
+import buttonsStyle from './../h4/common/c2-SuperButton/SuperButton.module.css'
 
 type AffairsPropsType = { // need to fix any
     data: Array<AffairType>
@@ -32,10 +33,10 @@ function Affairs(props: AffairsPropsType) {
         props.setFilter('low')
     }
 
-    const allActive = props.filter === 'all' ? classes.activeButton : classes.unActiveButton
-    const highActive = props.filter === 'high' ? classes.activeButton : classes.unActiveButton
-    const middleActive = props.filter === 'middle' ? classes.activeButton : classes.unActiveButton
-    const lowActive = props.filter === 'low' ? classes.activeButton : classes.unActiveButton
+    const allActive = props.filter === 'all' ? buttonsStyle.activeButton : buttonsStyle.default
+    const highActive = props.filter === 'high' ? buttonsStyle.activeButton : buttonsStyle.default
+    const middleActive = props.filter === 'middle' ? buttonsStyle.activeButton : buttonsStyle.default
+    const lowActive = props.filter === 'low' ? buttonsStyle.activeButton : buttonsStyle.default
 
     return (
         <div className={classes.affairsBlock}>
