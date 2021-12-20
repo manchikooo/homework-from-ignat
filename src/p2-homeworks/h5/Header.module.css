@@ -5,3 +5,12 @@
 .navLinks span:nth-child(2) {
     margin: 0 40px 0 40px;
 }
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navHeader {
+    text-align: center;
+}
