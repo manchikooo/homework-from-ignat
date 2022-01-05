@@ -9,10 +9,10 @@ import HW6 from "../../h6/HW6";
 function PreJunior() {
     return (
         <div className={classes.preJuniorBlock}>
-            {/*<HW1/>*/}
-            {/*<HW2/>*/}
-            {/*<HW3/>*/}
-            {/*<HW4/>*/}
+            <HW1/>
+            <HW2/>
+            <HW3/>
+            <HW4/>
             <HW6/>
         </div>
     )

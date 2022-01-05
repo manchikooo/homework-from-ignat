@@ -12,7 +12,7 @@ function HW6() {
     const restore = () => {
         const valueFromLS = localStorage.getItem('editable-span-value')
         if (valueFromLS) {
-            setValue(valueFromLS)
+            setValue(valueFromLS.slice(1, -1))
         }
     }
 

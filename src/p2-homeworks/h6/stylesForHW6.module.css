@@ -1,0 +1,12 @@
+.pointerForEditableSpan {
+    border: none;
+    width: 32px;
+    height: 32px;
+    /*background-color: #eee;*/
+    transition: all ease-in-out 1ms;
+    cursor: pointer;
+}
+.pointerForEditableSpan:hover{
+    border: 1px solid #888;
+    background-color: #1AE0FF
+}

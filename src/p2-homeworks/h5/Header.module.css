@@ -14,3 +14,17 @@
 .navHeader {
     text-align: center;
 }
+
+.menuTitle {
+    border: none;
+    min-width: 269px;
+    /*height: 100%;*/
+    /*background-color: #eee;*/
+    transition: all ease-in-out 1ms;
+    cursor: pointer;
+}
+
+.menuTitle:hover {
+    border: 1px solid #888;
+    background-color: #1AE0FF
+}

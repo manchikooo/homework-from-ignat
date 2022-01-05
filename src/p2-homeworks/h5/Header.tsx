@@ -26,10 +26,13 @@ function SelectTitle(props: SelectTitleType) {
             // onBlur={() => setCollapsed(true)}
                  tabIndex={0}>
             <div className={classes.navHeader}>
-                <h3 style={{cursor: "pointer"}}
+                <h3 className={classes.menuTitle}
                     onClick={() => setCollapsed(!collapsed)}
                 >{props.title}</h3>
-                {!collapsed && <SelectBody/>}
+                <div >
+                    {!collapsed && <SelectBody/>}
+                </div>
+
             </div>
         </div>
     )
