@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {homeWorkReducer} from './bll/homeWorkReducer'
+import {homeWorkReducer, sortAC} from './bll/homeWorkReducer'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 
 export type UserType = {
@@ -16,17 +16,30 @@ const initialPeople = [
 ]
 
 function HW8() {
+
     const [people, setPeople] = useState<Array<UserType>>(initialPeople) // need to fix any
+
+    const writingAge = (p: number) => {
+        let lastNumberOfAge = +p.toString().slice(-1)
+        if (lastNumberOfAge === 1) {
+            return 'год'
+        } else if (lastNumberOfAge === 2 || (lastNumberOfAge === 3) || (lastNumberOfAge === 4)) {
+            return 'года'
+        } else {
+            return 'лет'
+        }
+    }
 
     // need to fix any
     const finalPeople = people.map((p: UserType) => (
         <div key={p._id}>
-            name: {p.name}
-            age: {p.age}
+            <span>{p.name}, {p.age} {writingAge(p.age)}</span>
         </div>
     ))
 
     const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: 'SORT', payload: 'up'}))
+    const sortDown = () => setPeople(homeWorkReducer(initialPeople, {type: 'SORT', payload: 'down'}))
+    const checkAge = () => setPeople(homeWorkReducer(initialPeople, {type: 'CHECK', payload: 18}))
 
     return (
         <div>
@@ -36,9 +49,11 @@ function HW8() {
             {/*should work (должно работать)*/}
             {finalPeople}
 
-            <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-            <div>sort down</div>
-            check 18
+            <div>
+                <SuperButton onClick={sortUp}>sort up</SuperButton>
+                <SuperButton onClick={sortDown}>sort down</SuperButton>
+                <SuperButton onClick={checkAge}>check age (18+)</SuperButton>
+            </div>
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
