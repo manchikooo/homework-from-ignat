@@ -3,10 +3,12 @@
     width: 32px;
     height: 32px;
     /*background-color: #eee;*/
-    transition: all ease-in-out 1ms;
+    transition: all ease-in-out 0.3s;
     cursor: pointer;
 }
 .pointerForEditableSpan:hover{
     border: 1px solid #888;
+    border-radius: 15px;
+    padding: 1px 5px 1px 5px;
     background-color: #1AE0FF
 }
