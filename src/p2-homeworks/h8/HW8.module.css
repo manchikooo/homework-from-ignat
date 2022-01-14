@@ -1,0 +1,19 @@
+.HW8wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.peoplesBlock {
+    padding: 10px;
+}
+
+.peopleItem {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+
+.sortButtons {
+    display: flex;
+}

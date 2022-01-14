@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {homeWorkReducer, sortAC} from './bll/homeWorkReducer'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import styles from './HW8.module.css'
 
 export type UserType = {
     _id: number, name: string, age: number
@@ -32,8 +33,9 @@ function HW8() {
 
     // need to fix any
     const finalPeople = people.map((p: UserType) => (
-        <div key={p._id}>
-            <span>{p.name}, {p.age} {writingAge(p.age)}</span>
+        <div key={p._id} className={styles.peopleItem}>
+            <span>{p.name}</span>
+            <span>{p.age} {writingAge(p.age)}</span>
         </div>
     ))
 
@@ -42,14 +44,16 @@ function HW8() {
     const checkAge = () => setPeople(homeWorkReducer(initialPeople, {type: 'CHECK', payload: 18}))
 
     return (
-        <div>
+        <div className={styles.HW8wrapper}>
             <hr/>
             homeworks 8
 
             {/*should work (должно работать)*/}
-            {finalPeople}
+            <div className={styles.peoplesBlock}>
+                {finalPeople}
+            </div>
 
-            <div>
+            <div className={styles.sortButtons}>
                 <SuperButton onClick={sortUp}>sort up</SuperButton>
                 <SuperButton onClick={sortDown}>sort down</SuperButton>
                 <SuperButton onClick={checkAge}>check age (18+)</SuperButton>
